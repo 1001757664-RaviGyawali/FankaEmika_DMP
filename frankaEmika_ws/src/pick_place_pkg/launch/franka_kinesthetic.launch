@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_ip" />
+  <arg name="load_gripper" />
+  <arg name="bag_file_path" default="~/Desktop/KinestheticTeachingRecording/kinesthetic_teaching.bag" />
+
+  <!-- Launch real-robot control -->
+  <include file="$(find franka_control)/launch/franka_control.launch" pass_all_args="true" />
+
+  <!-- By default use joint position controllers -->
+  <arg name="transmission" default="position" />
+  <!-- Start ROS controllers -->
+  <include file="$(dirname)/ros_controllers.launch" pass_all_args="true" />
+
+  <!-- as well as MoveIt demo -->
+  <include file="$(dirname)/demo.launch" pass_all_args="true">
+    <!-- robot description is loaded by franka_control.launch -->
+    <arg name="load_robot_description" value="false" />
+    <!-- MoveItSimpleControllerManager provides ros_control's JointTrajectory controllers
+         as well as GripperCommand actions -->
+    <arg name="moveit_controller_manager" value="simple" />
+  </include>
+  
+  <node name="franka_kinesthetic_teaching" pkg="pick_place_pkg" type="franka_kinesthetic_teaching.py" output="screen">
+     <param name="bag_file_path" value="$(arg bag_file_path)" />
+  </node>
+</launch>

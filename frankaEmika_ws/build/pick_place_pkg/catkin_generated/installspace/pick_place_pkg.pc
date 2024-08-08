@@ -1,0 +1,8 @@
+prefix=/home/developer/frankaEmika_ws/install
+
+Name: pick_place_pkg
+Description: Description of pick_place_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+set(robot_trajectory_action_MESSAGE_FILES "msg/ExecuteTrajectoryAction.msg;msg/ExecuteTrajectoryActionGoal.msg;msg/ExecuteTrajectoryActionResult.msg;msg/ExecuteTrajectoryActionFeedback.msg;msg/ExecuteTrajectoryGoal.msg;msg/ExecuteTrajectoryResult.msg;msg/ExecuteTrajectoryFeedback.msg")
+set(robot_trajectory_action_SERVICE_FILES "")

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Include the basic control launch file -->
+  <include file="$(find franka_control)/launch/franka_control.launch" pass_all_args="true"/>
+
+  <!-- Define the arm ID argument -->
+  <arg name="arm_id" default="panda_arm"/>
+
+  <!-- Load the example controllers parameters -->
+  <rosparam command="load" file="$(find franka_example_controllers)/config/franka_example_controllers.yaml" subst_value="true"/>
+
+  <!-- Load the necessary controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="franka_state_controller joint_position_example_controller"/>
+  
+  <!-- RViz for visualization -->
+  <node pkg="rviz" type="rviz" output="screen" name="rviz" args="-d $(find franka_example_controllers)/launch/robot.rviz"/>
+</launch>
+
+

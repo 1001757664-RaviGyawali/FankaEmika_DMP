@@ -1,0 +1,9 @@
+# ExecuteTrajectory.action
+
+float64[] positions
+float64[] timestamps
+---
+bool success
+---
+# Feedback
+float64 progress

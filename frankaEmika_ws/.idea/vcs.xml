@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/src/franka_ros" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/moveit_tutorials" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/panda_moveit_config" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/pyrdmp" vcs="Git" />
+  </component>
+</project>

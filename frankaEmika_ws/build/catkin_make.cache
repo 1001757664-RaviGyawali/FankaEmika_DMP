@@ -1,0 +1,2 @@
+franka_ros/franka_control:franka_ros/franka_description:franka_ros/franka_example_controllers:franka_ros/franka_gazebo:franka_ros/franka_gripper:franka_ros/franka_hw:franka_ros/franka_msgs:franka_ros/franka_ros:franka_ros/franka_visualization:moveit_tutorials:panda_moveit_config:pick_place_pkg:robot_trajectory_action
+-DCATKIN_DEVEL_PREFIX=/home/developer/frankaEmika_ws/devel -DCMAKE_INSTALL_PREFIX=/home/developer/frankaEmika_ws/install -G Unix Makefiles
